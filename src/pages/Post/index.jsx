@@ -22,14 +22,11 @@ const Post = () => {
 
   return (
     <>
-      {loading ? (
-        <BeatLoader loading={loading} css={override} size={150} />
-      ) : (
-        <div className="PostInfo-main-div">
-          <PostInfo post={post} />
-          <CommentSection postId={post.id} />
-        </div>
-      )}
+      <BeatLoader loading={loading} css={override} size={150} />
+      <div className="PostInfo-main-div">
+        <PostInfo post={post} />
+        <CommentSection postId={post.id} />
+      </div>
     </>
   );
 };
